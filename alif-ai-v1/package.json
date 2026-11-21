@@ -1,0 +1,9 @@
+{
+  "name": "alif-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alif AI - personal AI chat website",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}

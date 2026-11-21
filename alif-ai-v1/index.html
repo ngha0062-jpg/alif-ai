@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Alif AI - asisten AI pribadi">
+  <title>Alif AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div><strong>Alif AI</strong><small>Personal assistant</small></div>
+      </div>
+      <button class="new-chat" id="newChat">＋ <span>Chat baru</span></button>
+      <div class="side-label">PENGATURAN</div>
+      <label class="field-label" for="personality">Kepribadian AI</label>
+      <textarea id="personality" rows="5" maxlength="1200">Kamu adalah Alif AI, asisten pribadi yang ramah, santai, pintar, dan menjelaskan sesuatu dengan bahasa sederhana. Jika pengguna memakai bahasa Indonesia gaul, balas dengan gaya santai.</textarea>
+      <p class="side-note">Kepribadian ini menjadi instruksi untuk AI. Tetap ada batas keselamatan dan kebijakan dari penyedia model.</p>
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span><span>Gemini API</span>
+        <button class="clear-btn" id="clearChat">Hapus chat</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+        <div class="mobile-brand">✦ Alif AI</div>
+        <span class="model-pill">Gemini Flash Lite</span>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">✦</div>
+          <h1>Ada yang bisa gw bantu?</h1>
+          <p>Kenalin, gw Alif AI. Tanyakan apa saja untuk memulai.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Ajari aku dasar-dasar HTML dari nol">⌨️ <span>Belajar coding</span></button>
+            <button class="suggestion" data-prompt="Bantu aku membuat ide website yang keren">💡 <span>Cari ide website</span></button>
+            <button class="suggestion" data-prompt="Jelaskan cara kerja kecerdasan buatan dengan sederhana">🧠 <span>Belajar tentang AI</span></button>
+            <button class="suggestion" data-prompt="Buatkan jadwal belajar coding selama 7 hari">📅 <span>Buat rencana belajar</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" placeholder="Kirim pesan ke Alif AI..." maxlength="6000" required></textarea>
+          <button class="send-btn" id="sendBtn" type="submit" aria-label="Kirim pesan">➤</button>
+        </form>
+        <p class="disclaimer">Alif AI bisa membuat kesalahan. Periksa kembali informasi penting.</p>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
